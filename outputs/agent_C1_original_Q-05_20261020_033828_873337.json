@@ -1,0 +1,184 @@
+{
+  "question_id": "C1_original_Q-05",
+  "question": "Which district had the larger 2025 budget per resident, Stonecairn or Coldharbour, and by how many tenge per resident?",
+  "model": "gpt-5.6-luna",
+  "max_rounds": 6,
+  "description_type": "original",
+  "calls": [
+    {
+      "round": 1,
+      "duration_seconds": 1.8862760999982129,
+      "input_tokens": 287,
+      "output_tokens": 111,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_R95jadybe8QTBWdDUrkJcWun",
+          "function": {
+            "arguments": "{\"district\": \"Stonecairn\", \"field\": \"budget_million_tenge\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_OBJtx2NBd5ADb719wu2Vb934",
+          "function": {
+            "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_MZsjtqTX6KG7CtcpGfBLLZfL",
+          "function": {
+            "arguments": "{\"district\": \"Coldharbour\", \"field\": \"budget_million_tenge\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_pEJ14IbJsxNhHfgwnGAKAroJ",
+          "function": {
+            "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "duration_seconds": 1.4747313000007125,
+      "input_tokens": 507,
+      "output_tokens": 65,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_xwsk8zeLIBlq8J2mfRDuv6zf",
+          "function": {
+            "arguments": "{\"expression\": \"2884.6*1000000/14926\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_udiwxMkdUNtlusv5NeVCRe7s",
+          "function": {
+            "arguments": "{\"expression\": \"2366.9*1000000/11407\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "duration_seconds": 1.4885580999980448,
+      "input_tokens": 610,
+      "output_tokens": 38,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_N5C180HJjlcDWnCnSOSFGiEP",
+          "function": {
+            "arguments": "{\"expression\":\"2366.9*1000000/11407-2884.6*1000000/14926\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "duration_seconds": 1.5251816999989387,
+      "input_tokens": 670,
+      "output_tokens": 51,
+      "content": "ANSWER: Coldharbour had the larger 2025 budget per resident, by approximately **14,235 tenge per resident** (Coldharbour: **207,495**; Stonecairn: **193,260**).",
+      "tool_calls": []
+    }
+  ],
+  "tool_calls": [
+    {
+      "round": 1,
+      "tool_call_id": "call_R95jadybe8QTBWdDUrkJcWun",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"budget_million_tenge\"}",
+      "result": {
+        "value": 2884.6,
+        "unit": "million tenge",
+        "source": "NR-06"
+      },
+      "duration_seconds": 0.0006059000006644055
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_OBJtx2NBd5ADb719wu2Vb934",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\"}",
+      "result": {
+        "value": 14926,
+        "unit": "residents",
+        "source": "NR-06"
+      },
+      "duration_seconds": 0.00037929999962216243
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_MZsjtqTX6KG7CtcpGfBLLZfL",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"budget_million_tenge\"}",
+      "result": {
+        "value": 2366.9,
+        "unit": "million tenge",
+        "source": "NR-12"
+      },
+      "duration_seconds": 0.0003283000005467329
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_pEJ14IbJsxNhHfgwnGAKAroJ",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\"}",
+      "result": {
+        "value": 11407,
+        "unit": "residents",
+        "source": "NR-12"
+      },
+      "duration_seconds": 0.0002885000030801166
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_xwsk8zeLIBlq8J2mfRDuv6zf",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"2884.6*1000000/14926\"}",
+      "result": {
+        "result": 193260.08307651078
+      },
+      "duration_seconds": 6.999999823165126e-05
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_udiwxMkdUNtlusv5NeVCRe7s",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"2366.9*1000000/11407\"}",
+      "result": {
+        "result": 207495.39756289998
+      },
+      "duration_seconds": 1.7899998056236655e-05
+    },
+    {
+      "round": 3,
+      "tool_call_id": "call_N5C180HJjlcDWnCnSOSFGiEP",
+      "name": "calculate",
+      "arguments": "{\"expression\":\"2366.9*1000000/11407-2884.6*1000000/14926\"}",
+      "result": {
+        "result": 14235.314486389194
+      },
+      "duration_seconds": 5.400000009103678e-05
+    }
+  ],
+  "answer": "ANSWER: Coldharbour had the larger 2025 budget per resident, by approximately **14,235 tenge per resident** (Coldharbour: **207,495**; Stonecairn: **193,260**).",
+  "status": "answered",
+  "input_tokens": 2074,
+  "output_tokens": 265
+}

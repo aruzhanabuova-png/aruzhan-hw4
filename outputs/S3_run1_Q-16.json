@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-16",
+  "answer": "ANSWER: Yes. Ossbridge and Ossford have a combined area of 2,130.8 km², which is 23.9 km² larger than Tarnvale’s 2,106.9 km².",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 1249,
+  "output_tokens": 163,
+  "duration_seconds": 4.656735499997012,
+  "api_calls": 3,
+  "tool_calls": 4,
+  "agent_log": "outputs\\agent_S3_run1_Q-16_20261020_031202_750898.json"
+}

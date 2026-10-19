@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-02",
+  "answer": "ANSWER: Harrowfield grew faster: **7.90%** versus Tarnvale’s **6.21%**, a difference of **1.69 percentage points**.",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 1441,
+  "output_tokens": 242,
+  "duration_seconds": 5.3638690000007045,
+  "api_calls": 3,
+  "tool_calls": 7,
+  "agent_log": "outputs\\agent_S3_run1_Q-02_20261020_031045_477367.json"
+}

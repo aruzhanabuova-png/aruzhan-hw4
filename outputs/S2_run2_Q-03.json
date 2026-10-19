@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: lindenmoor | 5.3",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Lindenmoor | 5.3",
+      "input_tokens": 2280,
+      "output_tokens": 453,
+      "seconds": 6.325773000000481
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Lindenmoor | 5.3",
+      "input_tokens": 2280,
+      "output_tokens": 367,
+      "seconds": 4.79420939999909
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Lindenmoor | 5.3",
+      "input_tokens": 2280,
+      "output_tokens": 352,
+      "seconds": 4.6840183999993315
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Lindenmoor | 5.3",
+      "input_tokens": 2280,
+      "output_tokens": 392,
+      "seconds": 5.078742800000327
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Lindenmoor | 5.3",
+      "input_tokens": 2280,
+      "output_tokens": 372,
+      "seconds": 4.530050699999265
+    }
+  ],
+  "input_tokens": 11400,
+  "output_tokens": 1936,
+  "duration_seconds": 25.412794299998495,
+  "question_id": "Q-03",
+  "strategy": "S2",
+  "run": 2,
+  "correct": true
+}

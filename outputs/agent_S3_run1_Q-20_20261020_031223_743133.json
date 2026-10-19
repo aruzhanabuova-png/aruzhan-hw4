@@ -1,0 +1,178 @@
+{
+  "question_id": "S3_run1_Q-20",
+  "question": "Of Ossbridge, Ashgrove and Harrowfield, which district had the largest 2025 budget per resident, and by how many tenge per resident did it exceed the lowest of the three?",
+  "model": "gpt-5.6-luna",
+  "max_rounds": 6,
+  "calls": [
+    {
+      "round": 1,
+      "duration_seconds": 2.042808899997908,
+      "input_tokens": 298,
+      "output_tokens": 154,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_t2i1oPkccCIaWbNUT16vz1cJ",
+          "function": {
+            "arguments": "{\"district\": \"Ossbridge\", \"field\": \"budget_million_tenge\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_bc5VPUIleE84fWoJxM3zgNIy",
+          "function": {
+            "arguments": "{\"district\": \"Ossbridge\", \"field\": \"population_2025\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_RRkgtlMOZtJzo8C4EmwA4Dmi",
+          "function": {
+            "arguments": "{\"district\": \"Ashgrove\", \"field\": \"budget_million_tenge\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_bmaHQoM8fA483SMMD88sTWSy",
+          "function": {
+            "arguments": "{\"district\": \"Ashgrove\", \"field\": \"population_2025\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_UkaaXqvJagW6xGj8IVmrchdQ",
+          "function": {
+            "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_7gHh0wicd869K7voMPjCWwlH",
+          "function": {
+            "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population_2025\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "duration_seconds": 1.8405416000023251,
+      "input_tokens": 608,
+      "output_tokens": 39,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_Uz4IqqrzJea6hMMyb59cswfa",
+          "function": {
+            "arguments": "{\"expression\":\"16021.7*1000000/90212 - 9284.5*1000000/52904\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "duration_seconds": 1.5357995999984269,
+      "input_tokens": 669,
+      "output_tokens": 41,
+      "content": "ANSWER: Harrowfield had the largest 2025 budget per resident. It exceeded the lowest—Ossbridge—by approximately **2,103.41 tenge per resident**.",
+      "tool_calls": []
+    }
+  ],
+  "tool_calls": [
+    {
+      "round": 1,
+      "tool_call_id": "call_t2i1oPkccCIaWbNUT16vz1cJ",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Ossbridge\", \"field\": \"budget_million_tenge\"}",
+      "result": {
+        "value": 9284.5,
+        "unit": "million tenge",
+        "source": "NR-01"
+      },
+      "duration_seconds": 0.0005931000014243182
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_bc5VPUIleE84fWoJxM3zgNIy",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Ossbridge\", \"field\": \"population_2025\"}",
+      "result": {
+        "value": 52904,
+        "unit": "residents",
+        "source": "NR-01"
+      },
+      "duration_seconds": 0.00033850000181701034
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_RRkgtlMOZtJzo8C4EmwA4Dmi",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"budget_million_tenge\"}",
+      "result": {
+        "value": 10488.1,
+        "unit": "million tenge",
+        "source": "NR-10"
+      },
+      "duration_seconds": 0.0003042999996978324
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_bmaHQoM8fA483SMMD88sTWSy",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"population_2025\"}",
+      "result": {
+        "value": 58760,
+        "unit": "residents",
+        "source": "NR-10"
+      },
+      "duration_seconds": 0.00030170000172802247
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_UkaaXqvJagW6xGj8IVmrchdQ",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\"}",
+      "result": {
+        "value": 16021.7,
+        "unit": "million tenge",
+        "source": "NR-07"
+      },
+      "duration_seconds": 0.0003051000021514483
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_7gHh0wicd869K7voMPjCWwlH",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population_2025\"}",
+      "result": {
+        "value": 90212,
+        "unit": "residents",
+        "source": "NR-07"
+      },
+      "duration_seconds": 0.00029599999834317714
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_Uz4IqqrzJea6hMMyb59cswfa",
+      "name": "calculate",
+      "arguments": "{\"expression\":\"16021.7*1000000/90212 - 9284.5*1000000/52904\"}",
+      "result": {
+        "result": 2103.414076675108
+      },
+      "duration_seconds": 9.469999713473953e-05
+    }
+  ],
+  "answer": "ANSWER: Harrowfield had the largest 2025 budget per resident. It exceeded the lowest—Ossbridge—by approximately **2,103.41 tenge per resident**.",
+  "status": "answered",
+  "input_tokens": 1575,
+  "output_tokens": 234
+}

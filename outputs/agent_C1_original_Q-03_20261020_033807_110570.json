@@ -1,0 +1,184 @@
+{
+  "question_id": "C1_original_Q-03",
+  "question": "In 2025, which district's households used more water per resident per day, Lindenmoor or Kelmarsh, and by how many litres per resident per day?",
+  "model": "gpt-5.6-luna",
+  "max_rounds": 6,
+  "description_type": "original",
+  "calls": [
+    {
+      "round": 1,
+      "duration_seconds": 2.199043399999937,
+      "input_tokens": 291,
+      "output_tokens": 109,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_7hwrrVNVGLvUeCtU35de3ZuF",
+          "function": {
+            "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"water_megalitres\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_2Tqek4m4Nk9ZpacZ9mEjaFqT",
+          "function": {
+            "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"population_2025\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_JCjw5ddm8xyVHHfN9lMPLNp5",
+          "function": {
+            "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"water_megalitres\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_bHNcnJ8jKRTxIdtk2YQLsyPg",
+          "function": {
+            "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"population_2025\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "duration_seconds": 1.5689390000006824,
+      "input_tokens": 509,
+      "output_tokens": 69,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_4wBYZExFg9KWa4BvLdb9xLWS",
+          "function": {
+            "arguments": "{\"expression\": \"2151.4*1000000/(29051*365)\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_CLArWp7PACQXT9HArPeGOmV5",
+          "function": {
+            "arguments": "{\"expression\": \"1739*1000000/(24117*365)\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "duration_seconds": 1.308904599998641,
+      "input_tokens": 616,
+      "output_tokens": 30,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_ucMXvUcdAg9sFFYu2ExMbzHb",
+          "function": {
+            "arguments": "{\"expression\":\"202.89306995774555-197.55291129260834\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "duration_seconds": 1.6026824000000488,
+      "input_tokens": 668,
+      "output_tokens": 39,
+      "content": "ANSWER: Lindenmoor used more water: approximately **5.3 litres per resident per day** more than Kelmarsh (202.9 vs. 197.6 litres).",
+      "tool_calls": []
+    }
+  ],
+  "tool_calls": [
+    {
+      "round": 1,
+      "tool_call_id": "call_7hwrrVNVGLvUeCtU35de3ZuF",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"water_megalitres\"}",
+      "result": {
+        "value": 2151.4,
+        "unit": "megalitres",
+        "source": "NR-08"
+      },
+      "duration_seconds": 0.0008382000014535151
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_2Tqek4m4Nk9ZpacZ9mEjaFqT",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"population_2025\"}",
+      "result": {
+        "value": 29051,
+        "unit": "residents",
+        "source": "NR-08"
+      },
+      "duration_seconds": 0.00029720000020461157
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_JCjw5ddm8xyVHHfN9lMPLNp5",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"water_megalitres\"}",
+      "result": {
+        "value": 1739,
+        "unit": "megalitres",
+        "source": "NR-04"
+      },
+      "duration_seconds": 0.00020009999934700318
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_bHNcnJ8jKRTxIdtk2YQLsyPg",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"population_2025\"}",
+      "result": {
+        "value": 24117,
+        "unit": "residents",
+        "source": "NR-04"
+      },
+      "duration_seconds": 0.00020079999740119092
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_4wBYZExFg9KWa4BvLdb9xLWS",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"2151.4*1000000/(29051*365)\"}",
+      "result": {
+        "result": 202.89306995774555
+      },
+      "duration_seconds": 7.990000085555948e-05
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_CLArWp7PACQXT9HArPeGOmV5",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"1739*1000000/(24117*365)\"}",
+      "result": {
+        "result": 197.55291129260834
+      },
+      "duration_seconds": 3.819999983534217e-05
+    },
+    {
+      "round": 3,
+      "tool_call_id": "call_ucMXvUcdAg9sFFYu2ExMbzHb",
+      "name": "calculate",
+      "arguments": "{\"expression\":\"202.89306995774555-197.55291129260834\"}",
+      "result": {
+        "result": 5.34015866513721
+      },
+      "duration_seconds": 4.8999998398358e-05
+    }
+  ],
+  "answer": "ANSWER: Lindenmoor used more water: approximately **5.3 litres per resident per day** more than Kelmarsh (202.9 vs. 197.6 litres).",
+  "status": "answered",
+  "input_tokens": 2084,
+  "output_tokens": 247
+}

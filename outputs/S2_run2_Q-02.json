@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: harrowfield | 1.69",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Harrowfield | 1.69",
+      "input_tokens": 2280,
+      "output_tokens": 213,
+      "seconds": 2.992298099998152
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Harrowfield | 1.69",
+      "input_tokens": 2280,
+      "output_tokens": 199,
+      "seconds": 3.5635761999983515
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Harrowfield | 1.69 percentage points",
+      "input_tokens": 2280,
+      "output_tokens": 221,
+      "seconds": 3.52842740000051
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Harrowfield | 1.69",
+      "input_tokens": 2280,
+      "output_tokens": 260,
+      "seconds": 3.7230187999994087
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Harrowfield | 1.69",
+      "input_tokens": 2280,
+      "output_tokens": 198,
+      "seconds": 2.8108790000005683
+    }
+  ],
+  "input_tokens": 11400,
+  "output_tokens": 1091,
+  "duration_seconds": 16.61819949999699,
+  "question_id": "Q-02",
+  "strategy": "S2",
+  "run": 2,
+  "correct": true
+}

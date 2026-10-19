@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: brightwater | 72.46",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Brightwater | 72.46",
+      "input_tokens": 2282,
+      "output_tokens": 133,
+      "seconds": 2.470877299998392
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Brightwater | 72.46",
+      "input_tokens": 2282,
+      "output_tokens": 140,
+      "seconds": 2.66137240000171
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Brightwater | 72.46",
+      "input_tokens": 2282,
+      "output_tokens": 144,
+      "seconds": 2.4189648999999918
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Brightwater | 72.46",
+      "input_tokens": 2282,
+      "output_tokens": 165,
+      "seconds": 2.906499900000199
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Brightwater | 72.46",
+      "input_tokens": 2282,
+      "output_tokens": 128,
+      "seconds": 2.047963400000299
+    }
+  ],
+  "input_tokens": 11410,
+  "output_tokens": 710,
+  "duration_seconds": 12.505677900000592,
+  "question_id": "Q-08",
+  "strategy": "S2",
+  "run": 2,
+  "correct": true
+}

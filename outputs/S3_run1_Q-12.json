@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-12",
+  "answer": "ANSWER: Tarnvale, by approximately **64.4 thousand tenge per pupil** (Tarnvale: 1,216.7; Harrowfield: 1,152.3 thousand tenge).",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 2070,
+  "output_tokens": 252,
+  "duration_seconds": 6.691847499998403,
+  "api_calls": 4,
+  "tool_calls": 7,
+  "agent_log": "outputs\\agent_S3_run1_Q-12_20261020_031140_324187.json"
+}

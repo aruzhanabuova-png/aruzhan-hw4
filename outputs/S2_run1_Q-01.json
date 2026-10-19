@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: ossbridge | 4.6",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Ossbridge | 4.6",
+      "input_tokens": 2274,
+      "output_tokens": 182,
+      "seconds": 4.065349900000001
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Ossbridge | 4.6",
+      "input_tokens": 2274,
+      "output_tokens": 207,
+      "seconds": 3.566121399999247
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Ossbridge | 4.6",
+      "input_tokens": 2274,
+      "output_tokens": 257,
+      "seconds": 3.6919316000021354
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Ossbridge | 4.6",
+      "input_tokens": 2274,
+      "output_tokens": 172,
+      "seconds": 2.92570269999851
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Ossbridge | 4.6",
+      "input_tokens": 2274,
+      "output_tokens": 262,
+      "seconds": 3.3288510000020324
+    }
+  ],
+  "input_tokens": 11370,
+  "output_tokens": 1080,
+  "duration_seconds": 17.577956600001926,
+  "question_id": "Q-01",
+  "strategy": "S2",
+  "run": 1,
+  "correct": true
+}

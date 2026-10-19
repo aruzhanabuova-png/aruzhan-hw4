@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: yes | 23.9",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: yes | 23.9",
+      "input_tokens": 2274,
+      "output_tokens": 83,
+      "seconds": 2.278665899997577
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: yes | 23.9",
+      "input_tokens": 2274,
+      "output_tokens": 61,
+      "seconds": 1.842950499998551
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: yes | 23.9",
+      "input_tokens": 2274,
+      "output_tokens": 59,
+      "seconds": 1.966275200000382
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: yes | 23.9",
+      "input_tokens": 2274,
+      "output_tokens": 67,
+      "seconds": 1.8229418999981135
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: yes | 23.9",
+      "input_tokens": 2274,
+      "output_tokens": 73,
+      "seconds": 1.8410317999987456
+    }
+  ],
+  "input_tokens": 11370,
+  "output_tokens": 343,
+  "duration_seconds": 9.75186529999337,
+  "question_id": "Q-16",
+  "strategy": "S2",
+  "run": 1,
+  "correct": true
+}

@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 2,
+  "question_id": "Q-03",
+  "answer": "ANSWER: Lindenmoor, by approximately **5.34 litres per resident per day** (202.89 vs. 197.55).",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 1416,
+  "output_tokens": 209,
+  "duration_seconds": 4.71031320000111,
+  "api_calls": 3,
+  "tool_calls": 6,
+  "agent_log": "outputs\\agent_S3_run2_Q-03_20261020_031312_281581.json"
+}

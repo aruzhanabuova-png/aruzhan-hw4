@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: tarnvale | 64.4",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Tarnvale | 64.4",
+      "input_tokens": 2277,
+      "output_tokens": 274,
+      "seconds": 3.667121999998926
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Tarnvale | 64.4",
+      "input_tokens": 2277,
+      "output_tokens": 369,
+      "seconds": 5.425961799999641
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Tarnvale | 64.4",
+      "input_tokens": 2277,
+      "output_tokens": 346,
+      "seconds": 4.812899599997763
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Tarnvale | 64.4",
+      "input_tokens": 2277,
+      "output_tokens": 385,
+      "seconds": 5.299355900002411
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Tarnvale | 64.4",
+      "input_tokens": 2277,
+      "output_tokens": 612,
+      "seconds": 7.130108900000778
+    }
+  ],
+  "input_tokens": 11385,
+  "output_tokens": 1986,
+  "duration_seconds": 26.33544819999952,
+  "question_id": "Q-12",
+  "strategy": "S2",
+  "run": 2,
+  "correct": true
+}

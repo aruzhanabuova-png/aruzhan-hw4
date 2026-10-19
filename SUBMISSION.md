@@ -272,62 +272,84 @@ This design makes it easier to check the source of each value, handle archived d
 ## Part B — Build it and run it (Medium)
 
 ### What I changed from Part A while coding
-
-<!-- what changed in your plan, and why. "None" is an answer too. -->
+I followed my original plan. I added a 6-round limit to prevent infinite loops and saved the results in JSON files to make them easier to check.
 
 ### B2 — Tests
 
 ```text
-<!-- pytest output -->
+============================= test session starts =============================
+platform win32 -- Python 3.13.15, pytest-9.1.1
+collected 15 items
+
+tests/test_tools.py::test_lookup_population PASSED
+tests/test_tools.py::test_lookup_correction PASSED
+tests/test_tools.py::test_lookup_misspelled_name PASSED
+tests/test_tools.py::test_lookup_similar_names PASSED
+tests/test_tools.py::test_lookup_archived PASSED
+tests/test_tools.py::test_lookup_unknown_field PASSED
+tests/test_tools.py::test_lookup_empty_name PASSED
+tests/test_tools.py::test_calculate_multiplication PASSED
+tests/test_tools.py::test_calculate_division PASSED
+tests/test_tools.py::test_calculate_zero_division PASSED
+tests/test_tools.py::test_calculate_dangerous_import PASSED
+tests/test_tools.py::test_calculate_class_access PASSED
+tests/test_tools.py::test_calculate_large_power PASSED
+tests/test_tools.py::test_calculate_empty_expression PASSED
+tests/test_tools.py::test_calculate_add_subtract PASSED
+
+============================= 15 passed in 0.12s ==============================
 ```
 
 ### B3 — The loop
 
-- Round limit, and why:
-- Where the logs are:
-- Real Q-09 conversation compared with my A3 version, what is different:
+- Round limit, and why: I set the maximum to 6 rounds to prevent infinite tool-calling loops and unnecessary API costs. If the agent reaches the limit without a final answer, its status is marked as unanswered.
+- Where the logs are: The logs are saved as JSON files in the outputs/ folder. For Q-09, the log is outputs/agent_Q-09_20261020_014115_756282.json. It contains tool arguments, results, execution times, model calls, and token usage.
+- Real Q-09 conversation compared with my A3 version, what is different: The real agent followed the same tool call sequence as my A3 plan: 4 lookup calls, 2 calculate calls, and 1 final calculate call. Both used 4 model rounds and produced the correct result. The difference was the final answer format. In A3, I planned "ANSWER: Millbrook | 0.6", but the real agent gave a longer explanation and included the population densities of both districts.
 
 ### B4 — Three strategies
 
 **What I kept the same:**
-
-<!-- model, temperature, k, prompts, answer format, anything else -->
+I used the same model (GPT-5.6 Luna) and the same 20 questions for all three strategies. I used the same answer key and evaluation rules. For S2, I used k = 5 votes. S1 and S2 received the same documents, while S3 used lookup and calculate tools.
 
 **My rule for a correct answer** (written before the first full run):
+An answer is correct if the district name (or yes/no) matches the answer key and the numerical result matches the expected value after rounding to the required decimal places. I will check the name and number separately. Missing answers and incorrect answers will not receive credit. The answer key will only be used for evaluation, never included in model prompts.
 
 | Run | Strategy | Correct /20 | Unanswered | Input tokens | Output tokens | Median seconds per question | Total seconds | Cost ($) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| 1 | S1 direct | | | | | | | |
-| 1 | S2 think and vote (k = ) | | | | | | | |
-| 1 | S3 tools | | | | | | | |
-| 2 | S1 direct | | | | | | | |
-| 2 | S2 think and vote (k = ) | | | | | | | |
-| 2 | S3 tools | | | | | | | |
+| 1 | S1 direct | 18 | 0 | 49540 | 8824 | 4.175 | 104.483 | 0.020497 |
+| 1 | S2 think and vote (k = 5) | 18 | 1 | 228000 | 22631 | 17.309 | 334.229 | 0.072757 |
+| 1 | S3 tools | 15 | 0 | 30945 | 4351 | 5.267 | 110.217 | 0.011410 |
+| 2 | S1 direct | 18 | 0 | 48880 | 4419 | 2.939 | 63.162 | 0.015079 |
+| 2 | S2 think and vote (k = 5) | 20 | 0 | 228000 | 22575 | 16.230 | 333.295 | 0.072690 |
+| 2 | S3 tools | 15 | 0 | 30110 | 4304 | 4.886 | 101.299 | 0.011187 |
+
+Cost: I calculated the cost using the model's token prices: $0.20 for 1 million input tokens and $1.20 for 1 million output tokens.
+Note: For S1, I used runs 2 and 3 because I changed the prompt between tests. This means the results are not fully comparable.
 
 **Per question (run 1):**
 
 | Question | S1 | S2 | S3 |
 |---|:---:|:---:|:---:|
-| Q-01 | | | |
-| Q-02 | | | |
-| Q-03 | | | |
-| Q-04 | | | |
-| Q-05 | | | |
-| Q-06 | | | |
-| Q-07 | | | |
-| Q-08 | | | |
-| Q-09 | | | |
-| Q-10 | | | |
-| Q-11 | | | |
-| Q-12 | | | |
-| Q-13 | | | |
-| Q-14 | | | |
-| Q-15 | | | |
-| Q-16 | | | |
-| Q-17 | | | |
-| Q-18 | | | |
-| Q-19 | | | |
-| Q-20 | | | |
+| Q-01 | ✓ | ✓ | ✓ |
+| Q-02 | ✓ | ✓ | ✓ |
+| Q-03 | ✓ | ✓ | ✓ |
+| Q-04 | ✓ | ✓ | ✗ |
+| Q-05 | ✓ | ✓ | ✓ |
+| Q-06 | ✓ | ✓ | ✓ |
+| Q-07 | ✓ | ✓ | ✓ |
+| Q-08 | ✓ | ✓ | ✗ |
+| Q-09 | ✓ | ✓ | ✓ |
+| Q-10 | ✓ | ✓ | ✓ |
+| Q-11 | ✓ | ✓ | ✓ |
+| Q-12 | ✗ | ✓ | ✓ |
+| Q-13 | ✓ | U | ✓ |
+| Q-14 | ✓ | ✓ | ✗ |
+| Q-15 | ✗ | ✓ | ✗ |
+| Q-16 | ✓ | ✓ | ✓ |
+| Q-17 | ✓ | ✓ | ✓ |
+| Q-18 | ✓ | ✓ | ✓ |
+| Q-19 | ✓ | ✗ | ✓ |
+| Q-20 | ✓ | ✓ | ✗ |
 
 ---
 
@@ -337,21 +359,86 @@ This design makes it easier to check the source of each value, handle archived d
 
 | Question | Calls (your description) | Calls (vague) | Answer (yours) | Answer (vague) |
 |---|---:|---:|---|---|
-| | | | | |
+| Q-01 | 7 | 7 | Ossbridge, 4.57 | Ossbridge, 4.57 |
+| Q-02 | 6 | 7 | Harrowfield, 1.69 | Harrowfield, 1.69 |
+| Q-03 | 7 | 6 | Lindenmoor, 5.3 | Lindenmoor, 5.34 |
+| Q-04 | 7 | 7 | Millbrook, 2.6 | Millbrook, 2.6 |
+| Q-05 | 7 | 7 | Coldharbour, 14235 | Coldharbour, 14235 |
+
+I tested five questions using two lookup descriptions. My original description was "Find a factual value for a district in the local corpus." The vague description was "Get information."
+Both descriptions produced answers for all five questions. The number of tool calls changed for Q-02 and Q-03. Q-03 also had a small difference in numerical precision. In this small experiment, the vague description did not cause unanswered questions, but the results show that tool descriptions can affect the agent's behavior.
+The lookup inputs were the same for all five questions. Only the calculations changed. In Q-02, the vague version used one more calculate call. In Q-03, it used one less calculate call. This happened because the model can choose different steps to solve a question. Both versions gave similar answers.
 
 ### C2 — Three mistakes explained
 
+**Mistake 1 — S1, Q-12**
+The model gave a wrong answer: "Harrowfield | 322.0 thousand tenge per pupil". The number was wrong. The model may have made a mistake with the calculation or units. I would check the numbers and units.
+
+**Mistake 2 — S2, Q-13**
+The final answer was "unanswered | unknown". But all five votes gave the same answer: "Coldharbour | 4.16%". The problem was probably in the voting code. I would check how the code reads and compares answers.
+
+**Mistake 3 — S3, Q-20**
+The agent answered: "Harrowfield had the largest 2025 budget per resident" and calculated 2,103.41. But the correct answer was Ashgrove with 2,993. The agent did not compare all districts correctly. I would calculate and check each district.
+
+1. Why does voting help sometimes but not always?
+Voting helps when the model gives different answers. If most answers are correct, voting can choose the correct one. But it cannot fix a mistake in the code or when most answers are wrong.
+
+2. Why is a calculator useful?
+A calculator gives exact math results. It helps avoid calculation mistakes. But the model must use the correct numbers and formula.
+
+3. Why does the agent need many rounds?
+The agent needs rounds to find data, calculate numbers, and give the final answer. Each new round can use more tokens because the model also reads the previous messages, tool calls, and results.
+
 ### C3 — Which strategy I would use, and what would change it
 
-### C4 — How sure I can be
+I would choose S2 (think and vote) when accuracy is the most important factor. It answered 18 out of 20 questions correctly in Run 1 and 20 out of 20 in Run 2. However, it was the slowest and most expensive strategy because it used five model calls per question.
+If speed and cost were more important, I would choose S1. It answered 18 out of 20 questions correctly in both runs and was much faster than S2. I would not choose S3 for this task because it answered only 15 out of 20 questions correctly in both runs.
+S1 used about 49,000 input tokens and took 63–104 seconds. S2 used 228,000 input tokens and took about 334 seconds. S3 used about 30,000 input tokens and took 101–110 seconds.
+
+**When would I change my choice?**
+Small budget: I would choose S1 because it uses fewer tokens than S2 and gives good results.
+Strict time limit: I would choose S1 because it is much faster than S2.
+Questions without math: I would choose S1 because a calculator is not needed.
+
+### C4 — How sure can I be?
+
+**1. How different were the two runs?**
+S1 got 18/20 correct answers in both runs.
+S2 got 18/20 in Run 1 and 20/20 in Run 2.
+S3 got 15/20 in both runs.
+So, S2 changed the most, with 2 more correct answers.
+
+**2. Is the difference between the two best strategies bigger than that?**
+The two best strategies were S1 and S2.
+S1 got an average of 18/20, and S2 got an average of 19/20.
+The difference is only 1 question. This is smaller than the difference between S2's two runs, which was 2 questions.
+
+**3. How many questions would I need?**
+I would test at least 200 questions and repeat each test 5 times. This would help me trust the results more.
+I am not fully sure about my results because 20 questions are not enough. Also, I changed the S1 prompt between tests, so the comparison is not completely fair.
 
 ### Final questions
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
+**1. When the model sends a `tool_calls` message, what has actually run so far?**
+The model has only asked to use a tool. The tool has not run yet. My Python code must read the request, run the tool, and send the result back to the model.
+
+**2. Why does `arguments` arrive as a string, and what goes wrong if you pass it straight into your function?**
+The arguments arrive as a JSON string. I use `json.loads()` to change it into a Python dictionary. If I pass the string directly, my function may get the wrong input or give an error.
+
+**3. How many tokens do your two tool definitions add to every S3 request?**
+My two tool definitions use about 201 tokens. I measured this using tiktoken. These tokens are added to every S3 request because the model needs to know how to use the tools.
+
+**4. How much more did S2 cost than S1?**
+In Run 1, S2 cost $0.072757 and S1 cost $0.020497. S2 cost **$0.052260 more**, about 3.55 times as much. This is because S2 asks the model five times for each question.
+
+**5. Which question needed the most rounds in S3, and why?**
+The maximum was 3 rounds. In Run 1, Q-07, Q-11, Q-12, and Q-15 needed 3 rounds. Q-11 also used 11 tool calls. The agent needed several steps to find data, make calculations, and give the final answer.
+
+**6. What would you change in `lookup` if there were 100,000 documents?**
+I would add a database and a search index. This would help `lookup` find the correct document faster without checking every document one by one.
+
+**7. What stops your `calculate` from running dangerous code? Could the model still make it misbehave?**
+My calculator uses safe AST operations instead of `eval()`. It does not allow dangerous Python commands. But the model can still send a wrong formula or invalid input.
+
+**8. For which kind of question did tools help most, and for which did they not help at all?**
+Tools were useful for finding exact numbers and doing calculations. For example, S3 used `lookup` and `calculate` in Q-20. But tools did not help when the agent chose the wrong data or comparison, so S3 still gave a wrong answer.

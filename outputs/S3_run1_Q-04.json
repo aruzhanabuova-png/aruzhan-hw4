@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-04",
+  "answer": "ANSWER: Millbrook has more pupils per school: 370.8 versus Ashgrove’s 368.2, a difference of approximately **2.6 pupils per school**.",
+  "status": "answered",
+  "correct": false,
+  "input_tokens": 1372,
+  "output_tokens": 209,
+  "duration_seconds": 5.17099220000091,
+  "api_calls": 3,
+  "tool_calls": 7,
+  "agent_log": "outputs\\agent_S3_run1_Q-04_20261020_031056_496930.json"
+}

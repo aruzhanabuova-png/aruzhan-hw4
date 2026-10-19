@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 2,
+  "question_id": "Q-05",
+  "answer": "ANSWER: Coldharbour had the larger 2025 budget per resident: approximately **207,495 tenge**, compared with Stonecairn’s **193,260 tenge**—a difference of **14,235 tenge per resident**.",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 1404,
+  "output_tokens": 230,
+  "duration_seconds": 5.311022200003208,
+  "api_calls": 3,
+  "tool_calls": 6,
+  "agent_log": "outputs\\agent_S3_run2_Q-05_20261020_031322_215022.json"
+}

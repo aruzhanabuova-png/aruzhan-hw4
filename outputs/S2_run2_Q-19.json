@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: lindenmoor | 0.035",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Lindenmoor | 0.035",
+      "input_tokens": 2274,
+      "output_tokens": 258,
+      "seconds": 3.096499600000243
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Lindenmoor | 0.035",
+      "input_tokens": 2274,
+      "output_tokens": 433,
+      "seconds": 4.165787599999021
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Lindenmoor | 0.035",
+      "input_tokens": 2274,
+      "output_tokens": 244,
+      "seconds": 3.341577099999995
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Lindenmoor | 0.035",
+      "input_tokens": 2274,
+      "output_tokens": 265,
+      "seconds": 3.453014800001256
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Redfen | 0.035",
+      "input_tokens": 2274,
+      "output_tokens": 236,
+      "seconds": 2.934106200002134
+    }
+  ],
+  "input_tokens": 11370,
+  "output_tokens": 1436,
+  "duration_seconds": 16.99098530000265,
+  "question_id": "Q-19",
+  "strategy": "S2",
+  "run": 2,
+  "correct": true
+}

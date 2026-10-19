@@ -1,0 +1,183 @@
+{
+  "question_id": "S3_run1_Q-12",
+  "question": "Which district's 2025 budget works out higher per school pupil, Harrowfield or Tarnvale, and by how many thousand tenge per pupil?",
+  "model": "gpt-5.6-luna",
+  "max_rounds": 6,
+  "calls": [
+    {
+      "round": 1,
+      "duration_seconds": 1.7757482000015443,
+      "input_tokens": 288,
+      "output_tokens": 107,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_rufE3DAjc6XIRM9jPdanCprd",
+          "function": {
+            "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_zqK39fbpUg0d5IRqtPveWVZN",
+          "function": {
+            "arguments": "{\"district\": \"Harrowfield\", \"field\": \"pupils\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_VlbGMHAOV08hVDaMJjtZRtna",
+          "function": {
+            "arguments": "{\"district\": \"Tarnvale\", \"field\": \"budget_million_tenge\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_aOoQ2YyrQw0qae8aQRLxmpBd",
+          "function": {
+            "arguments": "{\"district\": \"Tarnvale\", \"field\": \"pupils\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "duration_seconds": 1.7385874999999942,
+      "input_tokens": 506,
+      "output_tokens": 63,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_tl8SV4ZEja9molvOOLTZSsWU",
+          "function": {
+            "arguments": "{\"expression\": \"16021.7*1000/13904\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_pIvkNdlrmBpHuz1oUu6M9SJD",
+          "function": {
+            "arguments": "{\"expression\": \"12960.3*1000/10652\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "duration_seconds": 1.5356442000011157,
+      "input_tokens": 609,
+      "output_tokens": 36,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_rTNVa4b3XLbJfOeekVno09Km",
+          "function": {
+            "arguments": "{\"expression\":\"12960.3*1000/10652-16021.7*1000/13904\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "duration_seconds": 1.6376882000004116,
+      "input_tokens": 667,
+      "output_tokens": 46,
+      "content": "ANSWER: Tarnvale, by approximately **64.4 thousand tenge per pupil** (Tarnvale: 1,216.7; Harrowfield: 1,152.3 thousand tenge).",
+      "tool_calls": []
+    }
+  ],
+  "tool_calls": [
+    {
+      "round": 1,
+      "tool_call_id": "call_rufE3DAjc6XIRM9jPdanCprd",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\"}",
+      "result": {
+        "value": 16021.7,
+        "unit": "million tenge",
+        "source": "NR-07"
+      },
+      "duration_seconds": 0.0006033000026945956
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_zqK39fbpUg0d5IRqtPveWVZN",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"pupils\"}",
+      "result": {
+        "value": 13904,
+        "unit": "pupils",
+        "source": "NR-07"
+      },
+      "duration_seconds": 0.00032700000156182796
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_VlbGMHAOV08hVDaMJjtZRtna",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Tarnvale\", \"field\": \"budget_million_tenge\"}",
+      "result": {
+        "value": 12960.3,
+        "unit": "million tenge",
+        "source": "NR-03"
+      },
+      "duration_seconds": 0.0004698999982792884
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_aOoQ2YyrQw0qae8aQRLxmpBd",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Tarnvale\", \"field\": \"pupils\"}",
+      "result": {
+        "value": 10652,
+        "unit": "pupils",
+        "source": "NR-03"
+      },
+      "duration_seconds": 0.00045700000191573054
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_tl8SV4ZEja9molvOOLTZSsWU",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"16021.7*1000/13904\"}",
+      "result": {
+        "result": 1152.3086881472957
+      },
+      "duration_seconds": 0.00012960000094608404
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_pIvkNdlrmBpHuz1oUu6M9SJD",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"12960.3*1000/10652\"}",
+      "result": {
+        "result": 1216.7010889973715
+      },
+      "duration_seconds": 2.8399997972883284e-05
+    },
+    {
+      "round": 3,
+      "tool_call_id": "call_rTNVa4b3XLbJfOeekVno09Km",
+      "name": "calculate",
+      "arguments": "{\"expression\":\"12960.3*1000/10652-16021.7*1000/13904\"}",
+      "result": {
+        "result": 64.39240085007577
+      },
+      "duration_seconds": 9.630000204197131e-05
+    }
+  ],
+  "answer": "ANSWER: Tarnvale, by approximately **64.4 thousand tenge per pupil** (Tarnvale: 1,216.7; Harrowfield: 1,152.3 thousand tenge).",
+  "status": "answered",
+  "input_tokens": 2070,
+  "output_tokens": 252
+}

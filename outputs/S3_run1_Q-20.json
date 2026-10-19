@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-20",
+  "answer": "ANSWER: Harrowfield had the largest 2025 budget per resident. It exceeded the lowest—Ossbridge—by approximately **2,103.41 tenge per resident**.",
+  "status": "answered",
+  "correct": false,
+  "input_tokens": 1575,
+  "output_tokens": 234,
+  "duration_seconds": 5.423463099999935,
+  "api_calls": 3,
+  "tool_calls": 7,
+  "agent_log": "outputs\\agent_S3_run1_Q-20_20261020_031223_743133.json"
+}

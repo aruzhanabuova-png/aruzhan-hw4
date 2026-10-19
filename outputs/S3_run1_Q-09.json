@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-09",
+  "answer": "ANSWER: Millbrook has the higher 2025 population density by approximately **0.56 residents per square kilometre** (49.04 vs. 48.49).",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 1403,
+  "output_tokens": 222,
+  "duration_seconds": 5.068333600000187,
+  "api_calls": 3,
+  "tool_calls": 7,
+  "agent_log": "outputs\\agent_S3_run1_Q-09_20261020_031122_301806.json"
+}

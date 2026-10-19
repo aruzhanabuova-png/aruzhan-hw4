@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 2,
+  "question_id": "Q-15",
+  "answer": "ANSWER: Redfen has more pupils per school: 314.7 versus Kelmarsh’s 297.1, a difference of approximately **17.6 pupils per school**.",
+  "status": "answered",
+  "correct": false,
+  "input_tokens": 1373,
+  "output_tokens": 210,
+  "duration_seconds": 4.8156269999999495,
+  "api_calls": 3,
+  "tool_calls": 7,
+  "agent_log": "outputs\\agent_S3_run2_Q-15_20261020_031415_260385.json"
+}

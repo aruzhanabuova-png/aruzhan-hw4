@@ -1,0 +1,12 @@
+{
+  "strategy": "S2",
+  "run": 2,
+  "questions": 20,
+  "correct": 20,
+  "unanswered": 0,
+  "input_tokens": 228000,
+  "output_tokens": 22575,
+  "total_seconds": 333.295,
+  "median_seconds": 16.23,
+  "cost_usd": null
+}

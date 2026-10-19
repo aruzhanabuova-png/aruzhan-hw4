@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-11",
+  "answer": "ANSWER: Redfen has the fewest pupils per school, at 314.7. Millbrook has the highest, at 370.8, so the difference is 56.1 pupils per school.",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 2407,
+  "output_tokens": 315,
+  "duration_seconds": 7.026223299999401,
+  "api_calls": 4,
+  "tool_calls": 11,
+  "agent_log": "outputs\\agent_S3_run1_Q-11_20261020_031133_629594.json"
+}

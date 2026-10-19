@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: redfen | 17.61",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Redfen | 17.61",
+      "input_tokens": 2275,
+      "output_tokens": 85,
+      "seconds": 2.5986293999994814
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Redfen | 17.61",
+      "input_tokens": 2275,
+      "output_tokens": 85,
+      "seconds": 1.9656533999987005
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Redfen | 17.61",
+      "input_tokens": 2275,
+      "output_tokens": 104,
+      "seconds": 2.4872060999987298
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Redfen | 17.61",
+      "input_tokens": 2275,
+      "output_tokens": 84,
+      "seconds": 1.9854842999993707
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Redfen | 17.61",
+      "input_tokens": 2275,
+      "output_tokens": 95,
+      "seconds": 2.4793946999998298
+    }
+  ],
+  "input_tokens": 11375,
+  "output_tokens": 453,
+  "duration_seconds": 11.516367899996112,
+  "question_id": "Q-15",
+  "strategy": "S2",
+  "run": 1,
+  "correct": true
+}

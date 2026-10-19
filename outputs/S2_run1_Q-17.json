@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: harrowfield | 884",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Harrowfield | 884",
+      "input_tokens": 2286,
+      "output_tokens": 329,
+      "seconds": 4.4832210000022314
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Harrowfield | 884",
+      "input_tokens": 2286,
+      "output_tokens": 368,
+      "seconds": 4.254472799999348
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Harrowfield | 884",
+      "input_tokens": 2286,
+      "output_tokens": 257,
+      "seconds": 3.350283199997648
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Harrowfield | 884",
+      "input_tokens": 2286,
+      "output_tokens": 665,
+      "seconds": 6.439361500000814
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Harrowfield | 884",
+      "input_tokens": 2286,
+      "output_tokens": 355,
+      "seconds": 4.196278399998846
+    }
+  ],
+  "input_tokens": 11430,
+  "output_tokens": 1974,
+  "duration_seconds": 22.723616899998888,
+  "question_id": "Q-17",
+  "strategy": "S2",
+  "run": 1,
+  "correct": true
+}

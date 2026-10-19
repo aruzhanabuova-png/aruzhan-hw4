@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-17",
+  "answer": "ANSWER: Harrowfield’s households paid more: approximately **884.46 tenge per resident** more than Ossbridge in 2025.",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 1632,
+  "output_tokens": 258,
+  "duration_seconds": 5.631727500000125,
+  "api_calls": 3,
+  "tool_calls": 8,
+  "agent_log": "outputs\\agent_S3_run1_Q-17_20261020_031208_383580.json"
+}

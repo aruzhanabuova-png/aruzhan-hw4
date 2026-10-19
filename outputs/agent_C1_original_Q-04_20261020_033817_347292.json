@@ -1,0 +1,175 @@
+{
+  "question_id": "C1_original_Q-04",
+  "question": "Which district has more pupils per school in 2025/26, Ashgrove or Millbrook, and by how many pupils per school?",
+  "model": "gpt-5.6-luna",
+  "max_rounds": 6,
+  "description_type": "original",
+  "calls": [
+    {
+      "round": 1,
+      "duration_seconds": 1.752246500000183,
+      "input_tokens": 286,
+      "output_tokens": 97,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_TqLFjvivkjpZXWWbcJvSTo4N",
+          "function": {
+            "arguments": "{\"district\": \"Ashgrove\", \"field\": \"pupils\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_7avwOKYUoqJ3R4pflM1QG4po",
+          "function": {
+            "arguments": "{\"district\": \"Ashgrove\", \"field\": \"schools\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_D3twCcnOsU9MbHTdCOHmETXd",
+          "function": {
+            "arguments": "{\"district\": \"Millbrook\", \"field\": \"pupils\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_FxhMVsDcFP6ucEqjOBHzrjvV",
+          "function": {
+            "arguments": "{\"district\": \"Millbrook\", \"field\": \"schools\"}",
+            "name": "lookup"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "duration_seconds": 1.7244485000010172,
+      "input_tokens": 484,
+      "output_tokens": 73,
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_09jJtbVXpS3SKGgBQWwJSHYY",
+          "function": {
+            "arguments": "{\"expression\": \"8837/24\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_Ne4cTXF1lbfFeD4skcDtxUiy",
+          "function": {
+            "arguments": "{\"expression\": \"5562/15\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        },
+        {
+          "id": "call_EvFkM5oXx87FQqziiDHfHQ3r",
+          "function": {
+            "arguments": "{\"expression\": \"8837/24 - 5562/15\"}",
+            "name": "calculate"
+          },
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "duration_seconds": 1.360365799999272,
+      "input_tokens": 603,
+      "output_tokens": 40,
+      "content": "ANSWER: Millbrook has more pupils per school: 370.8 versus Ashgrove’s 368.2, a difference of approximately **2.6 pupils per school**.",
+      "tool_calls": []
+    }
+  ],
+  "tool_calls": [
+    {
+      "round": 1,
+      "tool_call_id": "call_TqLFjvivkjpZXWWbcJvSTo4N",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"pupils\"}",
+      "result": {
+        "value": 8837,
+        "unit": "pupils",
+        "source": "NR-10"
+      },
+      "duration_seconds": 0.0003347999991092365
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_7avwOKYUoqJ3R4pflM1QG4po",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"schools\"}",
+      "result": {
+        "value": 24,
+        "unit": "schools",
+        "source": "NR-10"
+      },
+      "duration_seconds": 0.00019439999960013665
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_D3twCcnOsU9MbHTdCOHmETXd",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Millbrook\", \"field\": \"pupils\"}",
+      "result": {
+        "value": 5562,
+        "unit": "pupils",
+        "source": "NR-11"
+      },
+      "duration_seconds": 0.000267100000201026
+    },
+    {
+      "round": 1,
+      "tool_call_id": "call_FxhMVsDcFP6ucEqjOBHzrjvV",
+      "name": "lookup",
+      "arguments": "{\"district\": \"Millbrook\", \"field\": \"schools\"}",
+      "result": {
+        "value": 15,
+        "unit": "schools",
+        "source": "NR-11"
+      },
+      "duration_seconds": 0.0002523000002838671
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_09jJtbVXpS3SKGgBQWwJSHYY",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"8837/24\"}",
+      "result": {
+        "result": 368.2083333333333
+      },
+      "duration_seconds": 3.890000152750872e-05
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_Ne4cTXF1lbfFeD4skcDtxUiy",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"5562/15\"}",
+      "result": {
+        "result": 370.8
+      },
+      "duration_seconds": 1.3900000340072438e-05
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_EvFkM5oXx87FQqziiDHfHQ3r",
+      "name": "calculate",
+      "arguments": "{\"expression\": \"8837/24 - 5562/15\"}",
+      "result": {
+        "result": -2.591666666666697
+      },
+      "duration_seconds": 1.7099999240599573e-05
+    }
+  ],
+  "answer": "ANSWER: Millbrook has more pupils per school: 370.8 versus Ashgrove’s 368.2, a difference of approximately **2.6 pupils per school**.",
+  "status": "answered",
+  "input_tokens": 1373,
+  "output_tokens": 210
+}

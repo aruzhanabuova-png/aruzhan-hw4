@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: ashgrove | 2993",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Ashgrove | 2993",
+      "input_tokens": 2287,
+      "output_tokens": 290,
+      "seconds": 4.137359299998934
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Ashgrove | 2993",
+      "input_tokens": 2287,
+      "output_tokens": 389,
+      "seconds": 4.693590700000641
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Ashgrove | 2993",
+      "input_tokens": 2287,
+      "output_tokens": 346,
+      "seconds": 4.199866799997835
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Ashgrove | 2993",
+      "input_tokens": 2287,
+      "output_tokens": 577,
+      "seconds": 6.370014299998729
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Ashgrove | 2993",
+      "input_tokens": 2287,
+      "output_tokens": 458,
+      "seconds": 4.771410900000774
+    }
+  ],
+  "input_tokens": 11435,
+  "output_tokens": 2060,
+  "duration_seconds": 24.172241999996913,
+  "question_id": "Q-20",
+  "strategy": "S2",
+  "run": 1,
+  "correct": true
+}

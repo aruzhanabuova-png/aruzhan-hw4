@@ -1,0 +1,13 @@
+{
+  "strategy": "S1",
+  "run": 3,
+  "questions": 20,
+  "correct": 18,
+  "unanswered": 0,
+  "input_tokens": 48880,
+  "output_tokens": 4419,
+  "token_split_complete": true,
+  "total_seconds": 63.162,
+  "median_seconds": 2.939,
+  "cost_usd": null
+}

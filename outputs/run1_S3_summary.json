@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "questions": 20,
+  "correct": 15,
+  "unanswered": 0,
+  "input_tokens": 30945,
+  "output_tokens": 4351,
+  "total_seconds": 110.217,
+  "median_seconds": 5.267,
+  "api_calls": 64,
+  "tool_calls": 129,
+  "cost_usd": null
+}

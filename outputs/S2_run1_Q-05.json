@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: coldharbour | 14235",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Coldharbour | 13935",
+      "input_tokens": 2276,
+      "output_tokens": 311,
+      "seconds": 4.012028799999825
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Coldharbour | 4235",
+      "input_tokens": 2276,
+      "output_tokens": 322,
+      "seconds": 4.3908489999994345
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Coldharbour | 14235",
+      "input_tokens": 2276,
+      "output_tokens": 392,
+      "seconds": 4.835438999998587
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Coldharbour | 14235",
+      "input_tokens": 2276,
+      "output_tokens": 429,
+      "seconds": 4.686114000000089
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Coldharbour | 14235",
+      "input_tokens": 2276,
+      "output_tokens": 373,
+      "seconds": 4.506112399998528
+    }
+  ],
+  "input_tokens": 11380,
+  "output_tokens": 1827,
+  "duration_seconds": 22.430543199996464,
+  "question_id": "Q-05",
+  "strategy": "S2",
+  "run": 1,
+  "correct": true
+}

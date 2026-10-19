@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-08",
+  "answer": "ANSWER: Brightwater’s households paid more—by **72,456.15 million tenge**.",
+  "status": "answered",
+  "correct": false,
+  "input_tokens": 1555,
+  "output_tokens": 210,
+  "duration_seconds": 4.756523700001708,
+  "api_calls": 3,
+  "tool_calls": 7,
+  "agent_log": "outputs\\agent_S3_run1_Q-08_20261020_031117_181571.json"
+}

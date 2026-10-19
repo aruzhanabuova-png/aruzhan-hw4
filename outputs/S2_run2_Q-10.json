@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: stonecairn | 8",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Stonecairn | 8",
+      "input_tokens": 2271,
+      "output_tokens": 48,
+      "seconds": 1.6336725000001024
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Stonecairn | 8",
+      "input_tokens": 2271,
+      "output_tokens": 53,
+      "seconds": 1.7833403999975417
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Stonecairn | 8",
+      "input_tokens": 2271,
+      "output_tokens": 53,
+      "seconds": 2.0049902999999176
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Stonecairn | 8",
+      "input_tokens": 2271,
+      "output_tokens": 48,
+      "seconds": 1.7737178999996104
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Stonecairn | 8",
+      "input_tokens": 2271,
+      "output_tokens": 47,
+      "seconds": 1.403518700000859
+    }
+  ],
+  "input_tokens": 11355,
+  "output_tokens": 249,
+  "duration_seconds": 8.599239799998031,
+  "question_id": "Q-10",
+  "strategy": "S2",
+  "run": 2,
+  "correct": true
+}

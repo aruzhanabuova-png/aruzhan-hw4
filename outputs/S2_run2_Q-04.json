@@ -1,0 +1,47 @@
+{
+  "answer": "ANSWER: millbrook | 2.59",
+  "votes": [
+    {
+      "vote": 1,
+      "answer": "ANSWER: Millbrook | 2.59",
+      "input_tokens": 2275,
+      "output_tokens": 87,
+      "seconds": 2.268456400001014
+    },
+    {
+      "vote": 2,
+      "answer": "ANSWER: Millbrook | 2.59",
+      "input_tokens": 2275,
+      "output_tokens": 84,
+      "seconds": 2.1034861000007368
+    },
+    {
+      "vote": 3,
+      "answer": "ANSWER: Millbrook | 2.59",
+      "input_tokens": 2275,
+      "output_tokens": 84,
+      "seconds": 1.840489099999104
+    },
+    {
+      "vote": 4,
+      "answer": "ANSWER: Millbrook | 2.59",
+      "input_tokens": 2275,
+      "output_tokens": 78,
+      "seconds": 1.8568964000005508
+    },
+    {
+      "vote": 5,
+      "answer": "ANSWER: Millbrook | 2.59",
+      "input_tokens": 2275,
+      "output_tokens": 82,
+      "seconds": 2.0340433000019402
+    }
+  ],
+  "input_tokens": 11375,
+  "output_tokens": 415,
+  "duration_seconds": 10.103371300003346,
+  "question_id": "Q-04",
+  "strategy": "S2",
+  "run": 2,
+  "correct": true
+}

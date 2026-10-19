@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 1,
+  "question_id": "Q-14",
+  "answer": "ANSWER: Ashgrove used more water: **204.69 litres per resident per day**, compared with Tarnvale’s **199.83 litres**, a difference of **4.85 litres per resident per day**.",
+  "status": "answered",
+  "correct": false,
+  "input_tokens": 1410,
+  "output_tokens": 223,
+  "duration_seconds": 4.911426200000278,
+  "api_calls": 3,
+  "tool_calls": 6,
+  "agent_log": "outputs\\agent_S3_run1_Q-14_20261020_031151_794777.json"
+}

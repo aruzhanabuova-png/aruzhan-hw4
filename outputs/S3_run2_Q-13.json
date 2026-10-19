@@ -1,0 +1,14 @@
+{
+  "strategy": "S3",
+  "run": 2,
+  "question_id": "Q-13",
+  "answer": "ANSWER: Coldharbour lost the largest percentage—approximately **4.16%** (from 11,902 to 11,407 residents).",
+  "status": "answered",
+  "correct": true,
+  "input_tokens": 1628,
+  "output_tokens": 274,
+  "duration_seconds": 5.113286900003004,
+  "api_calls": 3,
+  "tool_calls": 9,
+  "agent_log": "outputs\\agent_S3_run2_Q-13_20261020_031405_531902.json"
+}
